@@ -1,15 +1,10 @@
-pipeline {
-  agent { docker { image 'python:3.7.2' } }
-  stages {
-    stage('build') {
-      steps {
-        sh 'pip install -r requirements.txt'
-      }
-    }
-    stage('test') {
-      steps {
+node {
+      stage 'build'
+        node() {
+              sh 'pip install -r requirements.txt'      
+        }
+    stage'test'
+        node() {
         sh 'python test.py'
-      }      
-    }
-  }
+      }
 }
