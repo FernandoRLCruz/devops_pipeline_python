@@ -1,7 +1,7 @@
 version: "2"
 services:
   jenkins:
-    image: jenkinsci/blueocean
+    image: tgamauf/jenkins-python3
     user: root
     ports:
       - "8080:8080"
