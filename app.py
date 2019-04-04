@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 from flask import Flask
+import xmlrunner
 
 app = Flask(__name__)
 
@@ -14,3 +15,10 @@ def hello_user(username):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')     # open for everyone
+
+if __name__ == '__main__':
+    ############# Add these lines #############    
+    runner = xmlrunner.XMLTestRunner(output='test-reports')
+    unittest.main(testRunner=runner)
+    ###########################################
+    unittest.main()    
