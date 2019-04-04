@@ -1,5 +1,5 @@
 node {
-      stage 'build'
+    stage 'build'
         node() {
               sh 'sudo apt-get install python3-pip'
               sh 'sudo apt-get update'
@@ -7,6 +7,6 @@ node {
         }
     stage'test'
         node() {
-        sh 'python test.py'
-      }
+            sh 'python test.py'
+        }
 }
