@@ -10,6 +10,6 @@ node {
         }
     stage'test'
         node() {
-            sh 'python3 test.py'
+            sh 'python3 devops_pipeline_python/test.py'
         }
 }
