@@ -2,10 +2,10 @@ node {
     stage 'build'
         node() {
             sh 'whoami'
-            sh 'pip install -r requirements.txt'      
+            sh 'pip3 install -r requirements.txt'      
         }
     stage'test'
         node() {
-            sh 'python test.py'
+            sh 'python3 test.py'
         }
 }
