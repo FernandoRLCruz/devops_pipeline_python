@@ -4,7 +4,7 @@ node {
             sh 'whoami'
             sh 'pwd'
             sh 'ls -al'
-            sh 'git clone https://github.com/FernandoRLCruz/devops_pipeline_python.git'
+            sh 'cd devops_pipeline_python'
             sh 'pwd'
             sh 'ls -al'
             sh 'pip3 install -r requirements.txt'      
